@@ -1,6 +1,7 @@
 type Video @model {
   id: ID!
   title: String!
+  file: String!
   posts: [Post] @connection(name: "VideoPosts")
 }
 type Post @model {

@@ -1,7 +1,7 @@
 {
     "AppSyncApiName": "videoapp",
-    "schemaGraphql": "s3://videoapp-20181214122023-deployment/amplify-appsync-files/schema.graphql.1544819401263",
+    "schemaGraphql": "s3://videoapp-20181214122023-deployment/amplify-appsync-files/schema.graphql.1544850023970",
     "ResolverBucket": "videoapp-20181214122023-deployment",
     "ResolverRootKey": "amplify-appsync-files",
-    "DeploymentTimestamp": "1544819401263"
+    "DeploymentTimestamp": "1544850023970"
 }

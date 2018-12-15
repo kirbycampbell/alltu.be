@@ -1,6 +1,7 @@
 type Video {
   id: ID!
   title: String!
+  file: String!
   posts(filter: ModelPostFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelPostConnection
 }
 
@@ -85,6 +86,7 @@ input ModelBooleanFilterInput {
 input ModelVideoFilterInput {
   id: ModelIDFilterInput
   title: ModelStringFilterInput
+  file: ModelStringFilterInput
   and: [ModelVideoFilterInput]
   or: [ModelVideoFilterInput]
   not: ModelVideoFilterInput
@@ -102,11 +104,13 @@ type Query {
 input CreateVideoInput {
   id: ID
   title: String!
+  file: String!
 }
 
 input UpdateVideoInput {
   id: ID!
   title: String
+  file: String
 }
 
 input DeleteVideoInput {
