@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { ApolloProvider, Query } from "react-apollo";
 
 import "./index.css";
-//import App from "./App";
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import ApolloClient from "apollo-boost";
 import gql from "graphql-tag";
@@ -48,7 +48,7 @@ client
   })
   .then(result => console.log(result));
 
-const App = () => (
+const App1 = () => (
   <ApolloProvider client={client}>
     <div>
       <h2>My first Apollo app </h2>
