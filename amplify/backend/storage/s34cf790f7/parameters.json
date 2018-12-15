@@ -1,0 +1,9 @@
+{
+    "bucketName": "videoapp48fd6c13148743308abc16fa334eb464",
+    "authPolicyName": "s3_amplify_4cf790f7",
+    "unauthPolicyName": "s3_amplify_4cf790f7",
+    "authRoleName": "videoapp-20181214122023-authRole",
+    "unauthRoleName": "videoapp-20181214122023-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": "r"
+}

@@ -1,0 +1,15 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "videoapp-20181214122023-authRole",
+            "UnauthRoleArn": "arn:aws:iam::706688031207:role/videoapp-20181214122023-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::706688031207:role/videoapp-20181214122023-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "videoapp-20181214122023-deployment",
+            "UnauthRoleName": "videoapp-20181214122023-unauthRole",
+            "StackName": "videoapp-20181214122023",
+            "StackId": "arn:aws:cloudformation:us-west-2:706688031207:stack/videoapp-20181214122023/b0bf4320-ffdd-11e8-9793-503ac9316829"
+        }
+    },
+    "publish-ignore": []
+}

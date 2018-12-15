@@ -1,0 +1,16 @@
+type Video @model {
+  id: ID!
+  title: String!
+  posts: [Post] @connection(name: "VideoPosts")
+}
+type Post @model {
+  id: ID!
+  title: String!
+  video: Video @connection(name: "VideoPosts")
+  comments: [Comment] @connection(name: "PostComments")
+}
+type Comment @model {
+  id: ID!
+  content: String
+  post: Post @connection(name: "PostComments")
+}
