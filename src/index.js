@@ -12,7 +12,7 @@ const ExchangeRates = () => (
   <Query
     query={gql`
       {
-        rates(currency: "USD") {
+        rates(currency: "BTC") {
           currency
           rate
         }
@@ -40,7 +40,7 @@ client
   .query({
     query: gql`
       {
-        rates(currency: "USD") {
+        rates(currency: "BTC") {
           currency
         }
       }
