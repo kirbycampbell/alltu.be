@@ -2,12 +2,17 @@ type Video {
   id: ID!
   title: String!
   file: String!
+  info: String!
+  likes: Int
+  unlikes: Int
+  tags: String
   posts(filter: ModelPostFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelPostConnection
 }
 
 type Post {
   id: ID!
-  title: String!
+  content: String!
+  likes: Int
   video: Video
   comments(filter: ModelCommentFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelCommentConnection
 }
@@ -15,6 +20,7 @@ type Post {
 type Comment {
   id: ID!
   content: String
+  likes: Int
   post: Post
 }
 
@@ -87,6 +93,10 @@ input ModelVideoFilterInput {
   id: ModelIDFilterInput
   title: ModelStringFilterInput
   file: ModelStringFilterInput
+  info: ModelStringFilterInput
+  likes: ModelIntFilterInput
+  unlikes: ModelIntFilterInput
+  tags: ModelStringFilterInput
   and: [ModelVideoFilterInput]
   or: [ModelVideoFilterInput]
   not: ModelVideoFilterInput
@@ -105,12 +115,20 @@ input CreateVideoInput {
   id: ID
   title: String!
   file: String!
+  info: String!
+  likes: Int
+  unlikes: Int
+  tags: String
 }
 
 input UpdateVideoInput {
   id: ID!
   title: String
   file: String
+  info: String
+  likes: Int
+  unlikes: Int
+  tags: String
 }
 
 input DeleteVideoInput {
@@ -148,7 +166,8 @@ type ModelPostConnection {
 
 input ModelPostFilterInput {
   id: ModelIDFilterInput
-  title: ModelStringFilterInput
+  content: ModelStringFilterInput
+  likes: ModelIntFilterInput
   and: [ModelPostFilterInput]
   or: [ModelPostFilterInput]
   not: ModelPostFilterInput
@@ -156,13 +175,15 @@ input ModelPostFilterInput {
 
 input CreatePostInput {
   id: ID
-  title: String!
+  content: String!
+  likes: Int
   postVideoId: ID
 }
 
 input UpdatePostInput {
   id: ID!
-  title: String
+  content: String
+  likes: Int
   postVideoId: ID
 }
 
@@ -178,6 +199,7 @@ type ModelCommentConnection {
 input ModelCommentFilterInput {
   id: ModelIDFilterInput
   content: ModelStringFilterInput
+  likes: ModelIntFilterInput
   and: [ModelCommentFilterInput]
   or: [ModelCommentFilterInput]
   not: ModelCommentFilterInput
@@ -186,12 +208,14 @@ input ModelCommentFilterInput {
 input CreateCommentInput {
   id: ID
   content: String
+  likes: Int
   commentPostId: ID
 }
 
 input UpdateCommentInput {
   id: ID!
   content: String
+  likes: Int
   commentPostId: ID
 }
 

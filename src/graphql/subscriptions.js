@@ -5,10 +5,16 @@ export const onCreateVideo = `subscription OnCreateVideo {
   onCreateVideo {
     id
     title
+    file
+    info
+    likes
+    unlikes
+    tags
     posts {
       items {
         id
-        title
+        content
+        likes
       }
       nextToken
     }
@@ -19,10 +25,16 @@ export const onUpdateVideo = `subscription OnUpdateVideo {
   onUpdateVideo {
     id
     title
+    file
+    info
+    likes
+    unlikes
+    tags
     posts {
       items {
         id
-        title
+        content
+        likes
       }
       nextToken
     }
@@ -33,10 +45,16 @@ export const onDeleteVideo = `subscription OnDeleteVideo {
   onDeleteVideo {
     id
     title
+    file
+    info
+    likes
+    unlikes
+    tags
     posts {
       items {
         id
-        title
+        content
+        likes
       }
       nextToken
     }
@@ -46,15 +64,22 @@ export const onDeleteVideo = `subscription OnDeleteVideo {
 export const onCreatePost = `subscription OnCreatePost {
   onCreatePost {
     id
-    title
+    content
+    likes
     video {
       id
       title
+      file
+      info
+      likes
+      unlikes
+      tags
     }
     comments {
       items {
         id
         content
+        likes
       }
       nextToken
     }
@@ -64,15 +89,22 @@ export const onCreatePost = `subscription OnCreatePost {
 export const onUpdatePost = `subscription OnUpdatePost {
   onUpdatePost {
     id
-    title
+    content
+    likes
     video {
       id
       title
+      file
+      info
+      likes
+      unlikes
+      tags
     }
     comments {
       items {
         id
         content
+        likes
       }
       nextToken
     }
@@ -82,15 +114,22 @@ export const onUpdatePost = `subscription OnUpdatePost {
 export const onDeletePost = `subscription OnDeletePost {
   onDeletePost {
     id
-    title
+    content
+    likes
     video {
       id
       title
+      file
+      info
+      likes
+      unlikes
+      tags
     }
     comments {
       items {
         id
         content
+        likes
       }
       nextToken
     }
@@ -101,9 +140,11 @@ export const onCreateComment = `subscription OnCreateComment {
   onCreateComment {
     id
     content
+    likes
     post {
       id
-      title
+      content
+      likes
     }
   }
 }
@@ -112,9 +153,11 @@ export const onUpdateComment = `subscription OnUpdateComment {
   onUpdateComment {
     id
     content
+    likes
     post {
       id
-      title
+      content
+      likes
     }
   }
 }
@@ -123,9 +166,11 @@ export const onDeleteComment = `subscription OnDeleteComment {
   onDeleteComment {
     id
     content
+    likes
     post {
       id
-      title
+      content
+      likes
     }
   }
 }

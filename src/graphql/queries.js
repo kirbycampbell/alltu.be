@@ -5,10 +5,16 @@ export const getVideo = `query GetVideo($id: ID!) {
   getVideo(id: $id) {
     id
     title
+    file
+    info
+    likes
+    unlikes
+    tags
     posts {
       items {
         id
-        title
+        content
+        likes
       }
       nextToken
     }
@@ -24,10 +30,16 @@ export const listVideos = `query ListVideos(
     items {
       id
       title
+      file
+      info
+      likes
+      unlikes
+      tags
       posts {
         items {
           id
-          title
+          content
+          likes
         }
         nextToken
       }
@@ -39,15 +51,22 @@ export const listVideos = `query ListVideos(
 export const getPost = `query GetPost($id: ID!) {
   getPost(id: $id) {
     id
-    title
+    content
+    likes
     video {
       id
       title
+      file
+      info
+      likes
+      unlikes
+      tags
     }
     comments {
       items {
         id
         content
+        likes
       }
       nextToken
     }
@@ -62,15 +81,22 @@ export const listPosts = `query ListPosts(
   listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
-      title
+      content
+      likes
       video {
         id
         title
+        file
+        info
+        likes
+        unlikes
+        tags
       }
       comments {
         items {
           id
           content
+          likes
         }
         nextToken
       }
@@ -83,9 +109,11 @@ export const getComment = `query GetComment($id: ID!) {
   getComment(id: $id) {
     id
     content
+    likes
     post {
       id
-      title
+      content
+      likes
     }
   }
 }
@@ -99,9 +127,11 @@ export const listComments = `query ListComments(
     items {
       id
       content
+      likes
       post {
         id
-        title
+        content
+        likes
       }
     }
     nextToken

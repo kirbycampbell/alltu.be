@@ -25,8 +25,8 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/videoapp-20181214122023-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apivideoapp"
 			},
-			"lastPushTimeStamp": "2018-12-14T20:51:45.363Z",
-			"lastPushDirHash": "jPFFEhFbSFnZhfMKg6Un+swFe70="
+			"lastPushTimeStamp": "2018-12-15T05:18:48.436Z",
+			"lastPushDirHash": "EYGC1ezltFUcrL09UgUMfhb5Mic="
 		}
 	},
 	"hosting": {
@@ -37,7 +37,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/videoapp-20181214122023-deployment/amplify-cfn-templates/hosting/template.json",
 				"logicalId": "hostingS3AndCloudFront"
 			},
-			"lastPushTimeStamp": "2018-12-14T20:51:45.364Z",
+			"lastPushTimeStamp": "2018-12-15T05:18:47.581Z",
 			"output": {
 				"S3BucketSecureURL": "https://videoapp-20181214122915-hostingbucket.s3.amazonaws.com",
 				"WebsiteURL": "http://videoapp-20181214122915-hostingbucket.s3-website-us-west-2.amazonaws.com",
@@ -55,7 +55,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/videoapp-20181214122023-deployment/amplify-cfn-templates/auth/cognitodbe3d18b-cloudformation-template.yml",
 				"logicalId": "authcognitodbe3d18b"
 			},
-			"lastPushTimeStamp": "2018-12-14T20:51:45.377Z",
+			"lastPushTimeStamp": "2018-12-15T05:18:47.581Z",
 			"output": {
 				"AppClientSecret": "e9j26c39lnq0sj2pfchcqoee050d80bc1229qa7a6jl7vtoc6cr",
 				"UserPoolId": "us-west-2_pLByRXLNW",
@@ -76,7 +76,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/videoapp-20181214122023-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
 				"logicalId": "storages34cf790f7"
 			},
-			"lastPushTimeStamp": "2018-12-14T20:51:45.377Z",
+			"lastPushTimeStamp": "2018-12-15T05:18:47.582Z",
 			"output": {
 				"BucketName": "videoapp48fd6c13148743308abc16fa334eb464",
 				"Region": "us-west-2"

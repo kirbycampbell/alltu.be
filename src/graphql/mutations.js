@@ -5,10 +5,16 @@ export const createVideo = `mutation CreateVideo($input: CreateVideoInput!) {
   createVideo(input: $input) {
     id
     title
+    file
+    info
+    likes
+    unlikes
+    tags
     posts {
       items {
         id
-        title
+        content
+        likes
       }
       nextToken
     }
@@ -19,10 +25,16 @@ export const updateVideo = `mutation UpdateVideo($input: UpdateVideoInput!) {
   updateVideo(input: $input) {
     id
     title
+    file
+    info
+    likes
+    unlikes
+    tags
     posts {
       items {
         id
-        title
+        content
+        likes
       }
       nextToken
     }
@@ -33,10 +45,16 @@ export const deleteVideo = `mutation DeleteVideo($input: DeleteVideoInput!) {
   deleteVideo(input: $input) {
     id
     title
+    file
+    info
+    likes
+    unlikes
+    tags
     posts {
       items {
         id
-        title
+        content
+        likes
       }
       nextToken
     }
@@ -46,15 +64,22 @@ export const deleteVideo = `mutation DeleteVideo($input: DeleteVideoInput!) {
 export const createPost = `mutation CreatePost($input: CreatePostInput!) {
   createPost(input: $input) {
     id
-    title
+    content
+    likes
     video {
       id
       title
+      file
+      info
+      likes
+      unlikes
+      tags
     }
     comments {
       items {
         id
         content
+        likes
       }
       nextToken
     }
@@ -64,15 +89,22 @@ export const createPost = `mutation CreatePost($input: CreatePostInput!) {
 export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
   updatePost(input: $input) {
     id
-    title
+    content
+    likes
     video {
       id
       title
+      file
+      info
+      likes
+      unlikes
+      tags
     }
     comments {
       items {
         id
         content
+        likes
       }
       nextToken
     }
@@ -82,15 +114,22 @@ export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
 export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
   deletePost(input: $input) {
     id
-    title
+    content
+    likes
     video {
       id
       title
+      file
+      info
+      likes
+      unlikes
+      tags
     }
     comments {
       items {
         id
         content
+        likes
       }
       nextToken
     }
@@ -101,9 +140,11 @@ export const createComment = `mutation CreateComment($input: CreateCommentInput!
   createComment(input: $input) {
     id
     content
+    likes
     post {
       id
-      title
+      content
+      likes
     }
   }
 }
@@ -112,9 +153,11 @@ export const updateComment = `mutation UpdateComment($input: UpdateCommentInput!
   updateComment(input: $input) {
     id
     content
+    likes
     post {
       id
-      title
+      content
+      likes
     }
   }
 }
@@ -123,9 +166,11 @@ export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!
   deleteComment(input: $input) {
     id
     content
+    likes
     post {
       id
-      title
+      content
+      likes
     }
   }
 }
