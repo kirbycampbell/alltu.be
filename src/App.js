@@ -6,6 +6,7 @@ import { withAuthenticator, S3Album } from "aws-amplify-react";
 Amplify.configure(config);
 Storage.configure({ level: "private" });
 
+// This query is currently Working baby!!!!!
 const query = `
   query {
     listVideos {
@@ -14,27 +15,6 @@ const query = `
       }
     }
   }`;
-
-//const listTodos = `query listTodos {
-// listTodos{
-//   items{
-//     id
-//      name
-//      description
-//    }
-//  }
-//}`;
-
-//const addTodo = `mutation createTodo($name:String! $description: String!) {
-// createTodo(input:{
-//    name:$name
-//    description:$description
-//  }){
-//   id
-//   name
-//   description
-//  }
-//}`;
 
 class App extends Component {
   state = {
@@ -47,32 +27,6 @@ class App extends Component {
       videos: data.data.listVideos.items
     });
   }
-  //uploadFile = evt => {
-  //  const file = evt.target.files[0];
-  //  const name = file.name;
-  //
-  //  Storage.put(name, file).then(() => {
-  //    this.setState({ file: name });
-  //  });
-  //};
-  //
-  //todoMutation = async () => {
-  //  const todoDetails = {
-  //    name: "Party tonight!",
-  //    description: "Amplify CLI rocks!"
-  //  };
-  //
-  //  const newEvent = await API.graphql(graphqlOperation(addTodo, todoDetails));
-  //  alert(JSON.stringify(newEvent));
-  //};
-  //
-  //listQuery = async () => {
-  //  console.log("listing todos");
-  // const allTodos = await API.graphql(graphqlOperation(listTodos));
-  //  alert(JSON.stringify(allTodos));
-  //};
-  //<button onClick={this.listQuery}>GraphQL Query</button>
-  //<button onClick={this.todoMutation}>GraphQL Mutation</button>
 
   render() {
     return (
